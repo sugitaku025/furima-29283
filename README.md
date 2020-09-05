@@ -18,7 +18,7 @@
 - belongs_to _active_hash :birth_year
 - belongs_to _active_hash :birth_month
 - belongs_to _active_hash :birth_day
-- has_one :buyer
+- has_many :buyer
 
 ## items テーブル
 
