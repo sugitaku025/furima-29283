@@ -22,7 +22,6 @@
 | Column       | Type    | Options           |
 | ------------ | ------- | ----------------- |
 | name         | string  | null: false       |
-| image        | text    | null: false       |
 | price        | integer | null: false       |
 | explanation  | text    | null: false       |
 | category_id  | integer | null: false       |
