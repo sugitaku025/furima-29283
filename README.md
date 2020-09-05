@@ -20,6 +20,7 @@
 - belongs_to _active_hash :birth_year
 - belongs_to _active_hash :birth_month
 - belongs_to _active_hash :birth_day
+- has_one :buyer
 
 ## items テーブル
 
@@ -39,17 +40,19 @@
 ### Association
 
 - belongs_to :user
-- has_one :buyer
+- belongs_to :buyer
 
 ## buyers テーブル
 
-| Column   | Type    | Options           |
-| -------- | ------- | ----------------- |
-| items_id | integer | foreign_key: true |
+| Column  | Type    | Options           |
+| ------- | ------- | ----------------- |
+| item_id | integer | foreign_key: true |
+| user_id | integer | foreign_key: true |
 
 ### Association
 
-- belongs_to :item
+- belongs_to :user
+- has_many :items
 - has_many :addresses
 
 ## addresses テーブル
