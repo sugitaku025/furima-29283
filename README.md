@@ -32,7 +32,11 @@
 | user_id      | integer | foreign_key: true |
 
 ### Association
-
+- belongs_to_active_hash :category
+- belongs_to_active_hash :condition
+- belongs_to_active_hash :postage
+- belongs_to_active_hash :sender
+- belongs_to_active_hash :sending
 - belongs_to :user
 - has_one :buyer
 
