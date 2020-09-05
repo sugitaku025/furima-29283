@@ -24,18 +24,18 @@
 
 ## items テーブル
 
-| Column         | Type    | Options           |
-| -------------- | ------- | ----------------- |
-| name           | string  | null: false       |
-| image          | text    | null: false       |
-| price          | integer | null: false       |
-| explanation    | text    | null: false       |
-| category       | string  | null: false       |
-| item_condition | string  | null: false       |
-| postage        | integer | null: false       |
-| sender         | string  | null: false       |
-| sending        | date    | null: false       |
-| user_id        | integer | foreign_key: true |
+| Column       | Type    | Options           |
+| ------------ | ------- | ----------------- |
+| name         | string  | null: false       |
+| image        | text    | null: false       |
+| price        | integer | null: false       |
+| explanation  | text    | null: false       |
+| category_id  | integer | null: false       |
+| condition_id | integer | null: false       |
+| postage_id   | integer | null: false       |
+| sender_id    | integer | null: false       |
+| sending_id   | integer | null: false       |
+| user_id      | integer | foreign_key: true |
 
 ### Association
 
