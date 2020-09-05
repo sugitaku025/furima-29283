@@ -51,18 +51,19 @@
 
 ## addresses テーブル
 
-| Column       | Type    | Options           |
-| ------------ | ------- | ----------------- |
-| postal_code  | integer | null: false       |
-| prefectures  | string  | null: false       |
-| city         | string  | null: false       |
-| house_number | integer | null: false       |
-| building     | integer | null: false       |
-| phone_number | integer | null: false       |
-| buyer_id     | integer | foreign_key: true |
+| Column        | Type    | Options           |
+| ------------- | ------- | ----------------- |
+| postal_code   | string  | null: false       |
+| prefecture_id | integer | null: false       |
+| city          | string  | null: false       |
+| house_number  | string  | null: false       |
+| building      | string  | null: false       |
+| phone_number  | string  | null: false       |
+| buyer_id      | integer | foreign_key: true |
 
 ### Association
 
+- belongs_to_active_hash :prefecture
 - belongs_to :buyer
 
 This README would normally document whatever steps are necessary to get the
