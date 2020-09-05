@@ -17,7 +17,7 @@
 
 | Column         | Type    | Options           |
 | -------------- | ------- | ----------------- |
-| item_name      | string  | null: false       |
+| name           | string  | null: false       |
 | image          | text    | null: false       |
 | price          | integer | null: false       |
 | explanation    | text    | null: false       |
