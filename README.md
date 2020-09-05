@@ -43,7 +43,6 @@
 
 - belongs_to :item
 - has_many :addresses
-- has_many :credits
 
 ## addresses テーブル
 
@@ -60,21 +59,6 @@
 ### Association
 
 - belongs_to :buyer
-
-## credits テーブル
-
-| Column      | Type    | Options           |
-| ----------- | ------- | ----------------- |
-| card_number | integer | null: false       |
-| expiration  | integer | null: false       |
-| cvv         | integer | null: false       |
-| buyer_id    | integer | foreign_key: true |
-
-### Association
-
-- belongs_to :buyer
-
-
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
