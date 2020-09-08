@@ -18,7 +18,7 @@ class User < ApplicationRecord
     NAME_REGEX = /\A[ぁ-んァ-ン一-龥]+\z/.freeze
     validates_format_of :last_name, :first_name, with: NAME_REGEX
 
-    FURIGANA_NAME_REGEX = /\A[ァ-ン]+\z/.freeze
+    NAME_REGEX = /\A[ァ-ヴ]+\z/.freeze
     validates_format_of :furigana_last_name, :furigana_first_name, with: NAME_REGEX
 
 end
