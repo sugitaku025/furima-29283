@@ -9,4 +9,9 @@ class ItemsController < ApplicationController
       redirect_to new_user_session_path
     end
   end
+
+  private
+
+  def item_params
+    params.require(:item).permit(:image).merge(user_id: current_user.id)
 end
