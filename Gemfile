@@ -62,3 +62,4 @@ gem 'pry-rails'
 group :production do
   gem 'rails_12factor'
 end
+gem 'active_hash'
