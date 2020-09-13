@@ -9,6 +9,7 @@ class Item < ApplicationRecord
     validates :postage
     validates :sender
     validates :sending
+    validates :image
   end
   PRICE_REGEX = /\A[\d]+\z/.freeze
   validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
