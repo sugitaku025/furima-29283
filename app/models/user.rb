@@ -20,5 +20,7 @@ class User < ApplicationRecord
 
     NAME_REGEX = /\A[ァ-ヴ]+\z/.freeze
     validates_format_of :furigana_last_name, :furigana_first_name, with: NAME_REGEX
+    
 
+    has_many :items
 end
