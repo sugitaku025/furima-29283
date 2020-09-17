@@ -15,7 +15,7 @@
 ### Association
 
 - has_many :items
-- has_many :buyers
+- has_many :orders
 
 ## items テーブル
 
@@ -38,7 +38,7 @@
 - belongs_to_active_hash :sender
 - belongs_to_active_hash :sending
 - belongs_to :user
-- has_one :buyer
+- has_one :order
 
 ## orders テーブル
 
