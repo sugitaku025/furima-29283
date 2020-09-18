@@ -55,20 +55,20 @@
 
 ## addresses テーブル
 
-| Column        | Type    | Options           |
-| ------------- | ------- | ----------------- |
-| postal_code   | string  | null: false       |
-| prefecture_id | integer | null: false       |
-| city          | string  | null: false       |
-| house_number  | string  | null: false       |
-| building      | string  |                   |
-| phone_number  | string  | null: false       |
-| buyer_id      | integer | foreign_key: true |
+| Column        | Type       | Options                       |
+| ------------- | ---------- | ----------------------------- |
+| postal_code   | string     | null: false                   |
+| prefecture_id | integer    | null: false                   |
+| city          | string     | null: false                   |
+| house_number  | string     | null: false                   |
+| building      | string     |                               |
+| phone_number  | string     | null: false                   |
+| order         | references | null: false,foreign_key: true |
 
 ### Association
 
 - belongs_to_active_hash :prefecture
-- belongs_to :buyer
+- belongs_to :order
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
