@@ -45,7 +45,7 @@ class ItemsController < ApplicationController
       :category_id,
       :condition_id,
       :postage_id,
-      :sender_id,
+      :prefecture_id,
       :sending_id,
     )
     .merge(user_id: current_user.id)
