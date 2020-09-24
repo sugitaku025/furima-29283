@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, only: [:edit, :destroy]
 
   def index
     @item = Item.all.order("created_at DESC")
@@ -45,7 +46,7 @@ class ItemsController < ApplicationController
       :category_id,
       :condition_id,
       :postage_id,
-      :sender_id,
+      :prefecture_id,
       :sending_id,
     )
     .merge(user_id: current_user.id)
@@ -53,5 +54,11 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end

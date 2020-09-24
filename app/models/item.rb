@@ -7,7 +7,7 @@ class Item < ApplicationRecord
     validates :category
     validates :condition
     validates :postage
-    validates :sender
+    validates :prefecture
     validates :sending
     validates :image
   end
@@ -19,15 +19,16 @@ class Item < ApplicationRecord
     validates :category_id
     validates :condition_id
     validates :postage_id
-    validates :sender_id
+    validates :prefecture_id
     validates :sending_id
   end
 
   belongs_to :user
+  has_one :order
   has_one_attached :image
   belongs_to_active_hash :category
   belongs_to_active_hash :condition
   belongs_to_active_hash :postage
-  belongs_to_active_hash :sender
+  belongs_to_active_hash :prefecture
   belongs_to_active_hash :sending
 end

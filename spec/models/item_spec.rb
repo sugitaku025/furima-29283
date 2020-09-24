@@ -7,7 +7,7 @@ describe Item do
 
   describe '商品出品' do
     context '商品出品がうまくいくとき' do
-      it "image,name,explanation,category_id,condition_id,postage_id,sender_id,sending_id,priceが存在すれば登録できる" do
+      it "image,name,explanation,category_id,condition_id,postage_id,prefecture_id,sending_id,priceが存在すれば登録できる" do
         expect(@item).to be_valid
       end
     end
@@ -57,15 +57,15 @@ describe Item do
         @item.valid?
         expect(@item.errors.full_messages).to include("Postage must be other than 0")
       end
-      it 'sender_idが空だと出品できない' do
-        @item.sender_id = ''
+      it 'prefecture_idが空だと出品できない' do
+        @item.prefecture_id = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Sender can't be blank")
+        expect(@item.errors.full_messages).to include("Prefecture can't be blank")
       end
-      it 'sender_idで0が選択されていると出品できない' do
-        @item.sender_id = '0'
+      it 'prefecture_idで0が選択されていると出品できない' do
+        @item.prefecture_id = '0'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Sender must be other than 0")
+        expect(@item.errors.full_messages).to include("Prefecture must be other than 0")
       end
       it 'sending_idが空だと出品できない' do
         @item.sending_id = ''
