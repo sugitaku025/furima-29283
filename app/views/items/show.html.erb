@@ -29,9 +29,10 @@
         <%= link_to '削除', item_path(@item.id), method: :delete, class:'item-destroy' %>
       <% end %>
     <% end %>
-
-    <% unless Order.exists?(item_id: @item.id) or current_user.id == @item.user_id %>
-      <%= link_to '購入画面に進む', item_orders_path(item_id: @item.id), class:"item-red-btn"%>
+    <% if user_signed_in? && current_user.id != @item.user_id %>
+      <% if Order.exists?(@item.order.nil?) %>
+        <%= link_to '購入画面に進む', item_orders_path(item_id: @item.id), class:"item-red-btn"%>
+      <% end %>
     <% end %>
 
 
